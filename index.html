@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>La Fe de Jesús</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #eff6ff;
+            --accent: #d97706;
+            --background: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+            --success: #10b981;
+            --success-light: #ecfdf5;
+            --border: #e2e8f0;
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--background);
+            color: var(--text-main);
+            line-height: 1.5;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 480px;
+            background: var(--card-bg);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+        }
+
+        header {
+            padding: 24px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, #0f172a 100%);
+            color: white;
+            text-align: center;
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        header h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 4px; }
+        header p { color: #93c5fd; font-size: 0.9rem; font-weight: 500; }
+
+        .content { padding: 20px; flex: 1; overflow-y: auto; }
+        .vista { display: none; }
+        .vista.activa { display: block; animation: fadeIn 0.3s ease-in-out; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- VISTA: MENÚ PRINCIPAL --- */
+        .lista-lecciones { display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
+        .item-leccion {
+            display: flex; align-items: center; justify-content: space-between;
+            background: var(--card-bg); border: 1px solid var(--border);
+            padding: 16px; border-radius: var(--radius-lg); cursor: pointer;
+            transition: all 0.2s ease; box-shadow: var(--shadow);
+        }
+        .item-leccion:active { transform: scale(0.98); background-color: #f1f5f9; }
+        .item-leccion h3 { font-size: 1rem; font-weight: 600; color: var(--text-main); }
+        .badge { font-size: 0.75rem; font-weight: 700; padding: 6px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .badge.pendiente { background-color: #f1f5f9; color: var(--text-muted); }
+        .badge.hecho { background-color: var(--success-light); color: var(--success); }
+        .item-leccion.completada { border-color: rgba(16, 185, 129, 0.3); background: linear-gradient(to right, #ffffff, var(--success-light)); }
+
+        /* Sección del certificado en el menú */
+        .seccion-certificado-bloqueado {
+            margin-top: 25px; padding: 20px; background: #f1f5f9;
+            border-radius: var(--radius-lg); text-align: center; border: 2px dashed var(--border);
+        }
+        .seccion-certificado-desbloqueado {
+            margin-top: 25px; padding: 20px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-radius: var(--radius-lg); text-align: center; box-shadow: var(--shadow);
+            border: 1px solid #f59e0b;
+        }
+
+        /* --- VISTA: DETALLE DE LECCIÓN --- */
+        .btn-regresar { background: none; border: none; color: var(--primary); font-size: 0.95rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; margin-bottom: 20px; }
+        .leccion-banner { width: 100%; height: 180px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: 20px; box-shadow: var(--shadow); }
+        .leccion-titulo-pantalla { font-size: 1.4rem; font-weight: 700; color: var(--text-main); margin-bottom: 15px; }
+        .progress-container { background: #e2e8f0; height: 6px; border-radius: 3px; margin-bottom: 24px; overflow: hidden; }
+        .progress-bar-fill { background: linear-gradient(90deg, var(--primary) 0%, #3b82f6 100%); height: 100%; width: 0%; transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-pregunta { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; margin-bottom: 20px; box-shadow: var(--shadow); }
+        .cita-tag { display: inline-flex; align-items: center; background: var(--primary-light); color: var(--primary); padding: 6px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; margin-bottom: 14px; }
+        .texto-pregunta { font-size: 1.05rem; font-weight: 600; color: var(--text-main); margin-bottom: 16px; }
+        .opcion-btn { display: block; width: 100%; padding: 14px 16px; margin-bottom: 10px; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); text-align: left; font-family: inherit; font-size: 0.95rem; color: var(--text-main); cursor: pointer; transition: all 0.2s ease; }
+        .opcion-btn:hover { border-color: var(--text-muted); background-color: #f8fafc; }
+        .opcion-btn.seleccionada { background-color: var(--success-light); border-color: var(--success); color: #065f46; font-weight: 600; box-shadow: 0 0 0 1px var(--success); }
+        
+        .btn-action { width: 100%; padding: 16px; background: var(--primary); color: white; border: none; border-radius: var(--radius-md); font-size: 1rem; font-weight: 600; font-family: inherit; cursor: pointer; box-shadow: var(--shadow); transition: background 0.2s; margin-top: 10px; margin-bottom: 30px; }
+        .btn-action:active { background: #172554; }
+        .btn-accent { background: var(--accent); color: white; }
+        .btn-accent:active { background: #b45309; }
+
+        /* --- VISTA: FELICITACIONES --- */
+        .congrats-box { text-align: center; padding: 30px 10px; }
+        .congrats-icon { font-size: 4rem; margin-bottom: 15px; display: inline-block; animation: pop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        @keyframes pop { 0% { transform: scale(0); } 100% { transform: scale(1); } }
+        .input-name { width: 100%; padding: 14px; border: 2px solid var(--border); border-radius: var(--radius-md); font-family: inherit; font-size: 1rem; margin-top: 15px; margin-bottom: 20px; text-align: center; }
+        .input-name:focus { border-color: var(--primary); outline: none; }
+
+        /* --- ESTILOS EXCLUSIVOS DEL CERTIFICADO IMPRIMIBLE --- */
+        #certificado-imprimible { display: none; }
+
+        @media print {
+            body * { display: none !important; }
+            #certificado-imprimible, #certificado-imprimible * { display: block !important; }
+            #certificado-imprimible {
+                display: flex !important; flex-direction: column; justify-content: center; align-items: center;
+                width: 100%; height: 100vh; border: 20px double #1e3a8a; padding: 40px; box-sizing: border-box;
+                background-color: white; text-align: center; font-family: 'Playfair Display', Georgia, serif;
+            }
+            .cert-header { font-size: 28px; color: #1e3a8a; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+            .cert-sub { font-size: 18px; font-family: 'Plus Jakarta Sans', sans-serif; color: #64748b; margin-bottom: 40px; }
+            .cert-concede { font-size: 16px; font-style: italic; color: #334155; margin-bottom: 20px; }
+            .cert-nombre { font-size: 36px; font-weight: bold; color: #0f172a; border-bottom: 2px solid #cbd5e1; display: inline-block; padding-bottom: 5px; margin-bottom: 30px; min-width: 60%; font-style: italic; }
+            .cert-texto { font-size: 16px; font-family: 'Plus Jakarta Sans', sans-serif; color: #334155; max-width: 80%; line-height: 1.6; margin-bottom: 5px; }
+            .cert-fecha { font-size: 14px; font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-muted); margin-top: 40px; font-weight: bold; }
+            .cert-pastor { font-size: 14px; font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-muted); margin-top: 90px; font-weight: bold; }
+            .cert-pastor-firma {font-size: 12px; font-family: 'Plus Jakarta Sans' sans-serif; color:  var(--text-muted); margin-top: 5px; font-style: normal;}
+            .cert-texto-biblico { font-size: 12px; font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-muted); margin-top: 50px; font-style: italic; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <header id="app-header">
+        <h1>La Fe de Jesús</h1>
+        <p>Curso Bíblico Interactivo</p>
+    </header>
+
+    <div class="content">
+        <div id="vista-menu" class="vista activa">
+            <div class="lista-lecciones" id="contenedor-menu"></div>
+            <div id="contenedor-certificado-menu"></div>
+        </div>
+
+       <div id="vista-leccion" class="vista">
+    <button class="btn-regresar" onclick="mostrarMenu()">← Volver a las lecciones</button>
+    <h2 id="leccion-titulo" class="leccion-titulo-pantalla">Título</h2>
+    
+    <button class="btn-action" id="btn-lectura" style="background: #d97706; margin-bottom: 20px;" onclick="abrirLecturaAdicional()">
+        📖 Leer Material Complementario
+    </button>
+
+    <div id="bloque-lectura-interno" style="display: none; background: #ffffff; padding: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 20px; text-align: center;">
+        <button class="btn-regresar" onclick="cerrarLecturaAdicional()" style="background: #4b5563; color: white; margin-bottom: 15px;">
+            ✕ Cerrar Lectura y Volver a las Preguntas
+        </button>
+        <img id="img-lectura-adicional" src="" alt="Lectura Complementaria" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto; border-radius: 6px;">
+    </div>
+
+    <div id="contenido-preguntas-bloque">
+        <div class="progress-container"><div class="progress-bar-fill" id="progreso"></div></div>
+        <div id="contenedor-preguntas"></div>
+        <button class="btn-action" id="btn-siguiente" style="display:none;" onclick="evaluarCompromiso()">Completar Lección</button>
+    </div>
+</div>
+
+        <div id="vista-felicitacion" class="vista">
+            <div class="congrats-box">
+                <span class="congrats-icon">🎓</span>
+                <h2>¡Felicitaciones!</h2>
+                <p style="color: var(--text-muted); margin-top: 10px;">Has completado con éxito las 20 lecciones del curso de estudio bíblico "La Fe de Jesús".</p>
+                
+                <input type="text" id="nombre-estudiante" class="input-name" placeholder="Escribe tu nombre completo" />
+                
+                <button class="btn-action btn-accent" onclick="generarCertificado()">Generar Certificado PDF</button>
+                <button class="btn-action" style="background: #64748b;" onclick="mostrarMenu()">Volver al Panel</button>
+            </div>
+  <div id="vista-lectura" class="vista" style="display: none; background: #ffffff; min-height: 100vh; padding: 20px; box-sizing: border-box;">
+    <button class="btn-regresar" onclick="cerrarLecturaAdicional()" style="margin-bottom: 20px; display: block; width: 100%; max-width: 200px;">
+        ← Volver a la Lección
+    </button>
+    
+    <div style="width: 100%; text-align: center; margin-top: 10px;">
+        <img id="img-lectura-adicional" src="" alt="Lectura Complementaria" style="width: 100%; max-width: 500px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); display: inline-block;">
+    </div>
+</div>
+</div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div id="certificado-imprimible">
+    <div class="cert-header">Certificado de Finalización</div>
+    <div class="cert-sub">Curso Bíblico "La Fe de Jesús"</div>
+    <div class="cert-concede">Este documento certifica con honor que:</div>
+    <div class="cert-nombre" id="cert-nombre-txt">Nombre del Estudiante</div>
+    <div class="cert-texto">Ha cursado, completado satisfactoriamente y reafirmado su fe a través del estudio analítico de las 20 verdades fundamentales de las Sagradas Escrituras expuestas en este curso interactivo.</div>
+    <div class="cert-fecha" id="cert-fecha-txt">Fecha de emisión: --/--/----</div>
+    <div class="cert-pastor" id="cert-pastor-txt">Lic. Luis Sánchez</div>
+    <div class="cert-pastor-firma" id="cert-pastor-pie-txt">Pastor de Iglesia</div>
+    <div class="cert-texto-biblico" id="cert-texto-biblico-txt">Aqui está la paciencia de los Santos...Los que guardan Los mandamientos de Dios y tienen la Fé de Jesús</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

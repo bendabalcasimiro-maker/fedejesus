@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "titulo": "La Santa Biblia",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Quién inspiró las Sagradas Escrituras?",
+        "cita": "2 Timoteo 3:16",
+        "opciones": [
+          "Los hombres por su propia cuenta",
+          "Dios, a través del Espíritu Santo",
+          "Los reyes de la antigüedad"
+        ],
+        "correcta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Qué revelan las profecías de la Biblia?",
+        "cita": "Isaías 46:9-10",
+        "opciones": [
+          "El futuro y el carácter de Dios",
+          "Solo historias del pasado",
+          "Adivinaciones sin fundamento"
+        ],
+        "correcta": 0
+      }
+    ],
+    "compromiso": "¿Aceptas la Biblia como tu guía inspirada por Dios?"
+  }
+]
