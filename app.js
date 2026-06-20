@@ -778,8 +778,109 @@ const leccionesData = [
     }
     ],
     "compromiso": "Creo que Jesús fundó la iglesia. Unirme a ella y ser fiel hasta el fin"
-  }
-    
+  },
+  {
+    "id":15,
+    "titulo": "Lección 15: El Don de Profecía",
+    "lectura":"./Adicional/Ad2_15.png",
+    "imagen": "https://i.ibb.co/WpNPB5Zg/Lecc-11.png?w=500&q=80",
+    "preguntas": [
+    {
+        "id": 94,
+        "pregunta": "¿A quién revela Dios sus designios?",
+        "cita": "Amós 3:7",
+        "opciones": ["A los apóstoles", "A los escribas", "A los profetas"],
+        "correcta": 2
+    },
+    {
+        "id": 95,
+        "pregunta": "¿Cómo se comunica Dios con los profetas?",
+        "cita": "Números 12:6",
+        "opciones": ["De manera directa", "Hablando con ellos", "A través visiones y sueños"],
+        "correcta": 2
+    },
+    {
+        "id": 96,
+        "pregunta": "¿Puede una mujer ser profeta?",
+        "cita": "Joel 2:28; Hechos 21:9",
+        "opciones": ["De ninguna manera", "Si pueden ser profetas", "Algunas veces"],
+        "correcta": 1
+    },
+    {
+        "id": 97,
+        "pregunta": "¿Tuvo profetas la iglesia primitiva?",
+        "cita": "1era Corintios 12:28",
+        "opciones": ["Nunca", "Solo en el Pentescontés", "Si hubo profetas"],
+        "correcta": 2
+    },
+    {
+        "id": 98,
+        "pregunta": "¿Qué está predicho del don profético en la iglesia verdadera?",
+        "cita": "Apocalipsis 12:17; 19:10",
+        "opciones": ["El ataque del dragón contra los fieles", "Una fiesta de celebración", "Ninguna acción"],
+        "correcta": 0
+    }
+  ],
+  "compromiso": "¿Aceptas el don profético otorgado por Dios a su iglesia?"
+  },
+  {
+    "id":16,
+    "titulo": "Lección 16: Normas Cristianas",
+    "lectura":"./Adicional/Ad2_16.png",
+    "imagen": "https://i.ibb.co/WpNPB5Zg/Lecc-11.png?w=500&q=80",
+    "preguntas": [
+    {
+        "id": 99,
+        "pregunta": "¿Cómo considera Dios el cuerpo humano?",
+        "cita": "1era Corintios 6:19,20",
+        "opciones": ["Una casa vacía", "Templo del Espíritu santo", "Un vaso de barro"],
+        "correcta": 1
+    },
+    {
+        "id": 100,
+        "pregunta": "¿Cuál es la alimentación ideal para los seres humanos?",
+        "cita": "Génesis 1:29",
+        "opciones": ["Toda la proteína animal", "Frutas, plantas y semillas", "Sólo lecha animal"],
+        "correcta": 1
+    },
+    {
+        "id": 101,
+        "pregunta": "¿Qué carnes son particularmente inconvenientes?",
+        "cita": "Levítico 11:3-20",
+        "opciones": ["Animales que tiene  pezuña hendida y rumian", "Animales que no tienen pezuña hendida y rumian", "Animales que no tienen pezuña hendida y no rumian"],
+        "correcta": 0
+    },
+    {
+        "id": 102,
+        "pregunta": "¿Por qué prescindimos de bebidas alcohólicas?",
+        "cita": "Probervios 20:1",
+        "opciones": ["Porque cualquiera que ceda a ellas no es sabio", "Porque nos hace más poderosos", "Porque no nos hace importantes"],
+        "correcta": 0
+    },
+    {
+        "id": 103,
+        "pregunta": "¿Por qué conviene abstenerse del tabaco, las drogas, el café y otras sustancias dañinas?",
+        "cita": "1era Corintios 3:16,17",
+        "opciones": ["Porque debemos cuidar nuestro cuerpo", "De ninguna manera", "Todo es lícito"],
+        "correcta": 0
+    },
+    {
+        "id": 104,
+        "pregunta": "¿Cómo debe ser nuestro arreglo personal?",
+        "cita": "1era Timoteo 2:9,10",
+        "opciones": ["A la última moda", "Clásico comtemporáneo", "Con modestia y decoro"],
+        "correcta": 2
+    },
+    {
+        "id": 105,
+        "pregunta": "¿Por qué debemos elegir cuidadosamente nuestros pasatiempos (películas, música, lectura,  etc.?",
+        "cita": "Filipenses 4:8; Colosenses 3:2",
+        "opciones": ["Porque si hay virtud alguna en esto pensad", "Para pasar el tiempo bien", "Para no aburrirnos"],
+        "correcta": 0
+    },
+  ],
+  "compromiso": "¿Crees que tu cuerpo es templo del Espiritu Santo. Por lo tanto, te abstienes de todo alimento y bebida perjudiciales; además, adoptarás un estilo de vida cristiana en tu forma de vestir y de recrearte ?"
+}
 ];
 
 // REEMPLAZA ESTE ENLACE CON TU PROPIA URL DE APPS SCRIPT QUE COPIASTE EN EL PASO 3
@@ -1079,3 +1180,7 @@ function cerrarLecturaAdicional() {
 
 // Inicialización
 window.onload = cargarMenuPrincipal;
+// Al final de tu app.js, donde inicializas el curso:
+if (estudianteActual) {
+    mostrarMenu();
+}
