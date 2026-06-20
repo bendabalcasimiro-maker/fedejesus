@@ -68,3 +68,29 @@ authForm.addEventListener('submit', (e) => {
             });
     }
 });
+
+// Al final de tu auth.js actual, agrega esto:
+
+const btnCerrarSesion = document.getElementById('btn-cerrar-sesion');
+
+onAuthStateChanged(auth, (user) => {
+    // Si estamos en curso.html y NO hay usuario, redirigir al login
+    if (!user && window.location.pathname.includes('curso.html')) {
+        window.location.href = "index.html";
+    } 
+    // Si hay usuario y estamos en curso.html, asignarlo a tu variable global
+    else if (user && window.location.pathname.includes('curso.html')) {
+        if (typeof estudianteActual !== 'undefined') {
+            estudianteActual = user.email;
+        }
+    }
+});
+
+// Manejo de tu botón de salir original
+if (btnCerrarSesion) {
+    btnCerrarSesion.addEventListener('click', () => {
+        signOut(auth).then(() => {
+            window.location.href = "index.html";
+        });
+    });
+}
