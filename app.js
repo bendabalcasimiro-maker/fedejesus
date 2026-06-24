@@ -4,7 +4,7 @@ const leccionesData = [
     "id": 1,
     "titulo": "Lección 1: Lo que la Biblia dice acerca de Dios",
     "lectura":"./Adicional/Ad2_01.png",
-    "imagen": "https://i.ibb.co/35vSxMYk/Lecc-1.png?w=500&q=80",
+    "imagen":"https://i.ibb.co/35vSxMYk/Lecc-1.png",
     "preguntas": [
       {
         "id": 1,
@@ -42,7 +42,7 @@ const leccionesData = [
     "id": 2,
     "titulo": "Lección 2: La Santa Biblia",
     "lectura":"./Adicional/Ad2_02.png",
-    "imagen": "https://i.ibb.co/XfsVH6kZ/Lecc-2.png?w=500&q=80",
+    "imagen": "https://i.ibb.co/XfsVH6kZ/Lecc-2.png",
     "preguntas": [
       {
         "id": 5,
@@ -93,7 +93,7 @@ const leccionesData = [
     "id": 3,
     "titulo": "Lección 3: La Oración y La Fe",
     "lectura":"./Adicional/Ad2_03.png",
-    "imagen": "https://i.ibb.co/JR1y6ZQ4/Lecc-3.png?w=500&q=80",
+    "imagen": "https://i.ibb.co/JR1y6ZQ4/Lecc-3.png",
     "preguntas": [
       {
         "id": 11,
@@ -152,7 +152,7 @@ const leccionesData = [
     "id": 4,
     "titulo": "Lección 4: El regreso de Cristo",
     "lectura":"./Adicional/Ad2_04.png",
-    "imagen": "https://i.ibb.co/LDGk7K0n/Lecc-4.png?w=500&q=80",
+    "imagen": "https://i.ibb.co/LDGk7K0n/Lecc-4.png",
     "preguntas": [
       {
         "id": 18,
@@ -210,7 +210,7 @@ const leccionesData = [
     "id": 5,
     "titulo": "Lección 5: Señales del regreso de Cristo",
     "lectura":"./Adicional/Ad2_05.png",
-    "imagen": "?w=500&q=80",
+    "imagen": "https://i.ibb.co/Q784PrB7/Lecc-5.png",
     "preguntas": [
       {
         "id": 25,
@@ -275,7 +275,7 @@ const leccionesData = [
     "id": 6,
     "titulo": "Lección 6: El Origen del pecado",
     "lectura":"./Adicional/Ad2_06.png",
-    "imagen": "https://i.ibb.co/d4s28Hx8/Lecc-6.png?w=500&q=80",
+    "imagen": "https://i.ibb.co/d4s28Hx8/Lecc-6.png",
     "preguntas": [
       {
         "id": 33,
@@ -333,7 +333,7 @@ const leccionesData = [
     "id": 7,
     "titulo": "Lección 7: La Salvación",
     "lectura":"./Adicional/Ad2_07.png",
-    "imagen": "https://i.ibb.co/ymsf39YY/Lecc-7.png?w=500&q=80",
+    "imagen": "https://i.ibb.co/ymsf39YY/Lecc-7.png",
     "preguntas": [
       {
         "id": 40,
@@ -391,7 +391,7 @@ const leccionesData = [
     "id": 8,
     "titulo": "Lección 8: El perdón de los pecados",
     "lectura":"./Adicional/Ad2_08.png",
-    "imagen": "https://i.ibb.co/sJV2t27L/Lecc-8.png?w=500&q=80",
+    "imagen": "https://i.ibb.co/sJV2t27L/Lecc-8.png",
     "preguntas": [
       {
         "id": 47,
@@ -449,7 +449,7 @@ const leccionesData = [
     "id": 9,
     "titulo": "Lección 9: El Juicio",
     "lectura":"./Adicional/Ad2_09.png",
-    "imagen": "https://i.ibb.co/BVZ6NfpJ/Lecc-9.png?w=500&q=80",
+    "imagen": "https://i.ibb.co/BVZ6NfpJ/Lecc-9.png",
     "preguntas": [
       {
         "id": 54,
@@ -500,7 +500,7 @@ const leccionesData = [
     "id": 10,
     "titulo": "Lección 10: La Ley de Dios",
     "lectura":"./Adicional/Ad2_10.png",
-    "imagen": "https://i.ibb.co/Fq6ppHHR/Lecc-10.png?w=500&q=80",
+    "imagen": "https://i.ibb.co/Fq6ppHHR/Lecc-10.png",
     "preguntas": [
       {
         "id": 60,
@@ -558,7 +558,7 @@ const leccionesData = [
     "id":11,
     "titulo": "Lección 11: El Día de descanso",
     "lectura":"./Adicional/Ad2_11.png",
-    "imagen": "https://i.ibb.co/WpNPB5Zg/Lecc-11.png?w=500&q=80",
+    "imagen": "https://i.ibb.co/WpNPB5Zg/Lecc-11.png",
     "preguntas": [
       {
         "id": 67,
@@ -616,7 +616,7 @@ const leccionesData = [
     "id":12,
     "titulo": "Lección 12: El Día de descanso",
     "lectura":"./Adicional/Ad2_12.png",
-    "imagen": "https://i.ibb.co/WpNPB5Zg/Lecc-11.png?w=500&q=80",
+    "imagen": "https://i.ibb.co/Ndv6P299/Lecc-12.png",
     "preguntas": [
       {
         "id": 74,
@@ -674,7 +674,7 @@ const leccionesData = [
     "id":13,
     "titulo": "Lección 13: Qué es la muerte",
     "lectura":"./Adicional/Ad2_13.png",
-    "imagen": "https://i.ibb.co/WpNPB5Zg/Lecc-11.png?w=500&q=80",
+    "imagen": "https://i.ibb.co/gbxwkdg7/Lecc-13.png",
     "preguntas": [
     {
         "id": 81,
@@ -725,7 +725,7 @@ const leccionesData = [
     "id":14,
     "titulo": "Lección 14: La Iglesia de Cristo",
     "lectura":"./Adicional/Ad2_14.png",
-    "imagen": "https://i.ibb.co/WpNPB5Zg/Lecc-11.png?w=500&q=80",
+    "imagen": "https://i.ibb.co/nsrGMWDG/Lecc-14.png",
     "preguntas": [
     {
         "id": 87,
@@ -783,7 +783,7 @@ const leccionesData = [
     "id":15,
     "titulo": "Lección 15: El Don de Profecía",
     "lectura":"./Adicional/Ad2_15.png",
-    "imagen": "https://i.ibb.co/WpNPB5Zg/Lecc-11.png?w=500&q=80",
+    "imagen": "https://i.ibb.co/bjR8M95Y/Lecc-15.png",
     "preguntas": [
     {
         "id": 94,
@@ -827,7 +827,7 @@ const leccionesData = [
     "id":16,
     "titulo": "Lección 16: Normas Cristianas",
     "lectura":"./Adicional/Ad2_16.png",
-    "imagen": "https://i.ibb.co/WpNPB5Zg/Lecc-11.png?w=500&q=80",
+    "imagen": "https://i.ibb.co/B5JQ3Vvy/Lecc-16.png?w=500&q=80",
     "preguntas": [
     {
         "id": 99,
@@ -880,6 +880,223 @@ const leccionesData = [
     },
   ],
   "compromiso": "¿Crees que tu cuerpo es templo del Espiritu Santo. Por lo tanto, te abstienes de todo alimento y bebida perjudiciales; además, adoptarás un estilo de vida cristiana en tu forma de vestir y de recrearte ?"
+},
+{
+    "id":17,
+    "titulo": "Lección 17: El Bautismo",
+    "lectura":"./Adicional/Ad2_17.png",
+    "imagen": "https://i.ibb.co/fVzgVcP3/Lecc-17.png?w=500&q=80",
+    "preguntas": [
+    {
+        "id": 106,
+        "pregunta": "¿Quién estableció el bautismo?",
+        "cita": "Mateo 28:18-20",
+        "opciones": ["Jesucristo", "El Angel Gabriel", "Juan El Bautista"],
+        "correcta": 0
+    },
+    {
+        "id": 107,
+        "pregunta": "¿Qué simboliza el bautismo bíblico (el que se practica por medio de la inmersión en el agua?",
+        "cita": "Romanos 6:4,5",
+        "opciones": ["Simboliza vivir para siempre", "Simboliza calidad de vida", "Simboliza muerte al pecado"],
+        "correcta": 2
+    },
+    {
+        "id": 108,
+        "pregunta": "¿Quéimportancia tiene el bautismo para el creyente?",
+        "cita": "Marcos 16:15,16",
+        "opciones": ["Recoge el mandato final a sus discipulos", "No tiene efecto alguno", "Ninguna importancia"],
+        "correcta": 0
+    },
+    {
+        "id": 109,
+        "pregunta": "¿Qué dos bendiciones se reciben con el bautismo?",
+        "cita": "Hechos 2:38",
+        "opciones": ["Un millón de dólares", "Nada en absoluto", "Perdón de pecados y el Don de Profecía"],
+        "correcta": 2
+    },
+    {
+        "id": 110,
+        "pregunta": "¿A qué institución divina se unen los bautizados?",
+        "cita": "Hechos 2:41,42,47",
+        "opciones": ["Al ministerio de Jesús", "A la Santa Iglesia", "Al Grupu pequeño"],
+        "correcta": 1
+    },
+    {
+        "id": 111,
+        "pregunta": "¿Qué cambio produce el bautismo?",
+        "cita": "Romanos 6:4",
+        "opciones": ["Andar en vida nueva", "Andar como siempre", "No hay cambios"],
+        "correcta": 0
+    }
+  ],
+  "compromiso": "¿Crees en el bautismo por inmersión. Deseas ser bautizado siguiendo el ejemplo de Jesús?"
+},
+{
+    "id":18,
+    "titulo": "Lección 18: Socios de Dios",
+    "lectura":"./Adicional/Ad2_18.png",
+    "imagen": "https://i.ibb.co/hJMpxpXF/Lecc-18.png?w=500&q=80",
+    "preguntas": [
+    {
+        "id": 112,
+        "pregunta": "¿A quién pertenece el universo?",
+        "cita": "Salmo 24:1; 50:12",
+        "opciones": ["Jesucristo", "De Jehová es la Tierra...,El Mundo y los que en el habitan", "A Lucifer"],
+        "correcta": 1
+    },
+    {
+        "id": 113,
+        "pregunta": "¿Qué enormes riquezas posee Dios?",
+        "cita": "Ageo 2:8",
+        "opciones": ["La plata y el oro", "Los diamantes y el cobre", "El niquel y el uránio"],
+        "correcta": 0
+    },
+    {
+        "id": 114,
+        "pregunta": "¿Gracias a quién obtenemos nuestros bienes?",
+        "cita": "Deuteronomio 8:17,18",
+        "opciones": ["A nadie", "A Dios", "A mi trabajo"],
+        "correcta": 1
+    },
+    {
+        "id": 115,
+        "pregunta": "¿Qué proporción de nuestros ingresos pertenece a Dios?",
+        "cita": "Levítico 27:30,32; Mateo 23:23",
+        "opciones": ["Todo", "Una décima parte", "El 50%"],
+        "correcta": 1
+    },
+    {
+        "id": 116,
+        "pregunta": "¿De cuánto tenemos que dar el diezmo?",
+        "cita": "Deuteronomio 14:22",
+        "opciones": ["De la mitat", "De un tercio", "De todo"],
+        "correcta": 2
+    },
+    {
+        "id": 117,
+        "pregunta": "¿Para qué se emplea el diezmo?",
+        "cita": "1era Corinetios 9:13,14",
+        "opciones": ["Para las fiestas", "Para los pobres", "Para el sosten de la Obra de Dios"],
+        "correcta": 2
+    },
+    {
+        "id": 118,
+        "pregunta": "¿Qué bendición promete Dios?",
+        "cita": "Malaquías 3:10",
+        "opciones": ["Bendiciones hasta que sobreabunden", "Bendiciones por un mes", "Bendiciones para ti nada más"],
+        "correcta": 0
+    }
+  ],
+   "compromiso": "¿Te comprometes a entregar con alegría lo que pertenece a Dios?"
+},
+{
+    "id":19,
+    "titulo": "Lección 19: La Vida Cristiana",
+    "lectura":"./Adicional/Ad2_19.png",
+    "imagen": "https://i.ibb.co/0v72RCh/Lecc-19.png?w=500&q=80",
+    "preguntas": [
+    {
+        "id": 119,
+        "pregunta": "¿Qué cambio ocurre en la vida al aceptar a Jesús?",
+        "cita": "2da Corintios 5:17",
+        "opciones": ["Sigue igual", "Mejora un poquito", "Pasa a ser una nueva criatura"],
+        "correcta": 2
+    },
+    {
+        "id": 120,
+        "pregunta": "¿Qué nueva experiencia tendremos?",
+        "cita": "1era Tesalonicenses 5:23",
+        "opciones": ["Conservarnos puros hasat el retorno de Jesús", "Vivir los últimos días con dignidad", "Conservar el mismo carácter de siempre"],
+        "correcta": 0
+    },
+    {
+        "id": 121,
+        "pregunta": "¿Cuál es la actitud correcta ante las pruebas?",
+        "cita": "!era Pedro 4:12,13",
+        "opciones": ["No debemos sorprendernos", "Estar preocupados", "Salir de viaje"],
+        "correcta": 0
+    },
+    {
+        "id": 122,
+        "pregunta": "¿Cuál es el el indispensable alimento espiritual diario?",
+        "cita": "Deuteronomio 6:6-9; Jeremías 15:16",
+        "opciones": ["Estudiar la Palabra de Dios", "Comer carne", "Comer pollo"],
+        "correcta": 0
+    },
+    {
+        "id": 123,
+        "pregunta": "¿Cómo establecemos comunión con Dios?",
+        "cita": "1era Tesalonicenses 5:17",
+        "opciones": ["Cantando", "Orando", "Hablando"],
+        "correcta": 1
+    },
+    {
+        "id": 124,
+        "pregunta": "¿Qué día debemos dedicar a la adoración a Dios?",
+        "cita": "Isaías 58:12-14",
+        "opciones": ["El día de reposo (domingo)", "El día de reposo (viernes)", "El día de reposo sábado"],
+        "correcta": 2
+    },
+    {
+        "id": 125,
+        "pregunta": "¿CQué acostumbraba a ahcer Jesús los sábados?",
+        "cita": "Lucas 4:16",
+        "opciones": ["Ir al jardín de los olivos", "Irs a ver a sus hermanos", "Ir a la sinagoga"],
+        "correcta": 2
+    },
+    {
+        "id": 126,
+        "pregunta": "¿Qué misión confió Dios a su iglesia?",
+        "cita": "Mateo 24:14; 28:19",
+        "opciones": ["Predicad el evangelio", "Cantar todos los sábados", "Salir a visitar"],
+        "correcta": 0
+    }
+  ],
+  "compromiso": "¿Con la ayuda de Dios, y siguiendo a jesús, procurarás ser fiel?"
+},
+{
+    "id":20,
+    "titulo": "Lección 20: Dios nos llama",
+    "imagen": "https://i.ibb.co/WNDMWzc2/Lecc-20.png?w=500&q=80",
+    "preguntas": [
+    {
+        "id": 127,
+        "pregunta": "¿Cuál es la invitación que nos hace el Señor?",
+        "cita": "Hechos 2:38",
+        "opciones": ["Arrepentirnos y bautizarnos", "Seguir viviendo felices", "No pasará nada"],
+        "correcta": 0
+    },
+    {
+        "id": 128,
+        "pregunta": "¿Qué llamado dirigió Jesús a Mateo?",
+        "cita": "Lucas 5:27",
+        "opciones": ["Ven y sígueme", "Vete a tu casa", "Llamado de atención"],
+        "correcta": 0
+    },
+    {
+        "id": 129,
+        "pregunta": "¿Cómo respondió Mateo?",
+        "cita": "Lucas 5:28",
+        "opciones": ["Se quedó mudo", "Salió corriéndo", "Dejo todo y le siguió"],
+        "correcta": 2
+    },
+    {
+        "id": 130,
+        "pregunta": "¿Qué tierno otro llamado hace Jesús?",
+        "cita": "Apocalipsis 3:20",
+        "opciones": ["Todos vengan conmigo", "Súbete a mi moto", "El está a la puerta y llama"],
+        "correcta": 2
+    },
+    {
+        "id": 131,
+        "pregunta": "¿Qué decisión debemos tomar?",
+        "cita": "Hechos 22:16",
+        "opciones": ["Levántate y Bautízate", "Seguir la senda ancha", "Caminar solo por la vida"],
+        "correcta": 0
+    }
+  ],
+  "compromiso":"¿Reconoces que el señor Jesús te llama para unirte a su Iglesia. Gozoso respóndes a su invitación y le entregas tu vida"
 }
 ];
 
